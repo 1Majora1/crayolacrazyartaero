@@ -1,4 +1,8 @@
-import fetch from 'node-fetch';
+// Replace this:
+// const fetch = require('node-fetch');
+
+// With this:
+const fetch = await import('node-fetch');
 
 export default async function handler(req, res) {
     const { url } = req.query;
