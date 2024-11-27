@@ -1,0 +1,15 @@
+{
+  "name": "proxy-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^3.2.1"
+  },
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "16.x"
+  }
+}
