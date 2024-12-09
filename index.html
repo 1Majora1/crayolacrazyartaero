@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proxy Website</title>
+    <title>Web Proxy for School</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Enter URL to visit via proxy</h1>
-    <form id="proxy-form">
-        <input type="text" id="url-input" placeholder="Enter URL" required />
-        <button type="submit">Go</button>
-    </form>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center p-4">
+        Web Proxy for School
+    </header>
 
-    <div id="output">
-        <h2>Proxied Content</h2>
-        <iframe id="proxy-iframe" style="width: 100%; height: 600px;"></iframe>
-    </div>
+    <!-- Proxy Form -->
+    <section id="proxy" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2>Enter URL to Access</h2>
+                <form id="proxyForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="url" placeholder="Enter URL" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Access Website</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        document.getElementById('proxy-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const url = document.getElementById('url-input').value;
-            const proxyUrl = `/api/proxy?url=${encodeURIComponent(url)}`;
-            document.getElementById('proxy-iframe').src = proxyUrl;
-        });
-    </script>
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
